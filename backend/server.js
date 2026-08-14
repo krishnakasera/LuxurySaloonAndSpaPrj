@@ -13,24 +13,33 @@ const serviceRoutes = require("./routes/servicesRoutes");
 const app = express();
 
 // =====================================
+// MIDDLEWARE
+// =====================================
+
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  })
+);
+
+app.use(express.json());
+
+// =====================================
 // CONNECT DATABASE
 // =====================================
 
 connectDB();
 
 // =====================================
-// MIDDLEWARE
-// =====================================
-
-app.use(cors());
-app.use(express.json());
-
-// =====================================
 // TEST ROUTE
 // =====================================
 
 app.get("/", (req, res) => {
-  res.send("Backend server is running");
+  res.json({
+    success: true,
+    message: "Luxury Salon & Spa Backend is running",
+  });
 });
 
 // =====================================
@@ -58,11 +67,32 @@ app.use("/api/services", serviceRoutes);
 app.use("/api/admin", adminRoutes);
 
 // =====================================
-// START SERVER
+// ERROR HANDLER
+// =====================================
+
+app.use((err, req, res, next) => {
+  console.error(err);
+
+  res.status(500).json({
+    success: false,
+    message: "Internal Server Error",
+  });
+});
+
+// =====================================
+// LOCAL SERVER
 // =====================================
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+// =====================================
+// EXPORT FOR VERCEL
+// =====================================
+
+module.exports = app;
