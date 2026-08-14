@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Banner */
+
+.about-banner {
+  height: 60vh;
+  background: url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f")
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 50px;
+  border-radius: 10px;
+}
+
+.overlay h1 {
+  font-size: 60px;
+}
+
+.overlay p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* About */
+
+.about-section {
+  padding: 80px 10%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-image img {
+  width: 500px;
+  border-radius: 15px;
+}
+
+.about-content h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about-content button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  background: #c89b3c;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Stats */
+
+.stats {
+  background: #111;
+  color: white;
+  padding: 70px 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.stat-card h2 {
+  font-size: 40px;
+  color: #c89b3c;
+}
+
+/* Mission */
+
+.mission-vision {
+  padding: 80px 10%;
+  display: flex;
+  gap: 30px;
+}
+
+.box {
+  flex: 1;
+  background: #f8f5ef;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.box h2 {
+  margin-bottom: 15px;
+}
+
+/* Why Choose */
+
+.why-choose {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.why-choose h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.choose-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.choose-card {
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  background: white;
+}
+
+.choose-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+  }
+
+  .choose-container {
+    grid-template-columns: 1fr;
+  }
+
+  .overlay h1 {
+    font-size: 40px;
+  }
+}

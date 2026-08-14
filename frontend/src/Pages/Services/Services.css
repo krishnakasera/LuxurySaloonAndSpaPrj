@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Banner */
+
+.services-banner {
+  height: 50vh;
+  background: url("https://images.unsplash.com/photo-1560066984-138dadb4c035")
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 30px 50px;
+  border-radius: 10px;
+}
+
+.banner-overlay h1 {
+  font-size: 60px;
+}
+
+/* Services */
+
+.services-section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.service-content {
+  padding: 20px;
+}
+
+.service-content h3 {
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #c89b3c;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.service-content button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* Packages */
+
+.packages {
+  background: #f8f5ef;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.packages h2 {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.package-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.package-card {
+  width: 300px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.gold {
+  background: #c89b3c;
+  color: white;
+}
+
+/* Features */
+
+.service-features {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.service-features h2 {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  color: #c89b3c;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .banner-overlay h1 {
+    font-size: 40px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}

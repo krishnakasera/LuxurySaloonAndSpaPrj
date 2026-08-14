@@ -1,0 +1,949 @@
+/* =====================================================
+   APPOINTMENT PAGE
+===================================================== */
+
+.appointment-page {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(248, 245, 239, 0.94),
+      rgba(248, 245, 239, 0.94)
+    );
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   APPOINTMENT BOX
+===================================================== */
+
+.appointment-box {
+  width: 600px;
+  max-width: 100%;
+
+  padding: 45px;
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.10);
+
+  border: 1px solid #eee;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.appointment-box h1 {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 36px;
+  font-weight: 700;
+
+  color: #222;
+}
+
+.appointment-subtitle {
+  margin: 12px 0 30px;
+
+  text-align: center;
+
+  color: #777;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.appointment-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =====================================================
+   LABELS
+===================================================== */
+
+.appointment-box label {
+  margin-top: 18px;
+  margin-bottom: 8px;
+
+  color: #333;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.appointment-box input,
+.appointment-box select,
+.appointment-box textarea {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #333;
+
+  font-size: 15px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.appointment-box textarea {
+  min-height: 100px;
+
+  resize: vertical;
+
+  font-family: inherit;
+}
+
+
+/* =====================================================
+   INPUT FOCUS
+===================================================== */
+
+.appointment-box input:focus,
+.appointment-box select:focus,
+.appointment-box textarea:focus {
+  border-color: #c89b3c;
+
+  box-shadow:
+    0 0 0 3px rgba(200, 155, 60, 0.12);
+}
+
+
+/* =====================================================
+   READONLY USER DETAILS
+===================================================== */
+
+.appointment-box input[readonly] {
+  background: #f7f7f7;
+
+  color: #666;
+
+  cursor: not-allowed;
+}
+
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.appointment-box select {
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   ERROR MESSAGE
+===================================================== */
+
+.error-message {
+  margin: 0 0 15px;
+
+  padding: 12px 15px;
+
+  background: #fff0f0;
+
+  border: 1px solid #f1b5b5;
+
+  border-radius: 10px;
+
+  color: #c0392b;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   SELECTED OFFER
+===================================================== */
+
+.selected-offer {
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #fff5dc
+    );
+
+  border: 1px solid #e2c36b;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.offer-label {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  padding: 5px 12px;
+
+  border-radius: 20px;
+
+  background: #c89b3c;
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.selected-offer h3 {
+  margin: 5px 0 8px;
+
+  color: #8d691f;
+
+  font-size: 21px;
+}
+
+.selected-offer p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 14px;
+}
+
+.selected-offer strong {
+  color: #b8860b;
+}
+
+
+/* =====================================================
+   SELECTED MEMBERSHIP
+===================================================== */
+
+.selected-membership {
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: #f5f5f5;
+
+  border: 1px solid #ddd;
+
+  text-align: center;
+}
+
+.selected-membership span {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: #888;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.selected-membership h3 {
+  margin: 0;
+
+  color: #444;
+
+  font-size: 21px;
+}
+
+
+/* =====================================================
+   INCLUDED SERVICES
+===================================================== */
+
+.appointment-included {
+  margin-top: 22px;
+
+  padding: 20px;
+
+  background: #faf8f3;
+
+  border: 1px solid #eee2c8;
+
+  border-radius: 14px;
+}
+
+.appointment-included h3 {
+  margin: 0 0 12px;
+
+  color: #333;
+
+  font-size: 17px;
+}
+
+.appointment-included ul {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.appointment-included li {
+  margin: 9px 0;
+
+  color: #555;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   PRICE SUMMARY
+===================================================== */
+
+.price-summary {
+  margin-top: 25px;
+
+  padding: 22px;
+
+  background: #faf8f3;
+
+  border: 1px solid #eadfc9;
+
+  border-radius: 15px;
+}
+
+.price-summary h3 {
+  margin: 0 0 18px;
+
+  color: #333;
+
+  font-size: 18px;
+
+  border-bottom: 1px solid #e4d8bd;
+
+  padding-bottom: 12px;
+}
+
+
+/* =====================================================
+   PRICE ROW
+===================================================== */
+
+.price-row {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 9px 0;
+
+  color: #555;
+
+  font-size: 15px;
+}
+
+.price-row strong {
+  color: #333;
+}
+
+
+/* =====================================================
+   DISCOUNT ROW
+===================================================== */
+
+.discount-row {
+  color: #4f7f2c;
+}
+
+.discount-row strong {
+  color: #4f7f2c;
+}
+
+
+/* =====================================================
+   FINAL PRICE
+===================================================== */
+
+.final-price-row {
+  margin-top: 10px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid #ddd;
+
+  font-size: 17px;
+}
+
+.final-price-row span {
+  font-weight: 700;
+
+  color: #222;
+}
+
+.final-price-row strong {
+  color: #c89b3c;
+
+  font-size: 25px;
+}
+
+
+/* =====================================================
+   CONFIRM BUTTON
+===================================================== */
+
+.appointment-box form > button {
+  width: 100%;
+
+  margin-top: 30px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #111;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.appointment-box form > button:hover {
+  background: #c89b3c;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(200, 155, 60, 0.25);
+}
+
+
+/* =====================================================
+   DISABLED BUTTON
+===================================================== */
+
+.appointment-box form > button:disabled {
+  background: #aaa;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =====================================================
+   THANK YOU PAGE
+===================================================== */
+
+.thank-you-page {
+  min-height: 100vh;
+
+  padding: 70px 20px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: #f8f5ef;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   THANK YOU BOX
+===================================================== */
+
+.thank-you-box {
+  width: 650px;
+  max-width: 100%;
+
+  padding: 45px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.10);
+
+  border: 1px solid #eee;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SUCCESS ICON
+===================================================== */
+
+.success-icon {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #c89b3c;
+
+  color: white;
+
+  font-size: 42px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 25px rgba(200, 155, 60, 0.25);
+}
+
+
+/* =====================================================
+   THANK YOU HEADINGS
+===================================================== */
+
+.thank-you-box h1 {
+  margin: 0 0 10px;
+
+  color: #c89b3c;
+
+  font-size: 40px;
+}
+
+.thank-you-box h2 {
+  margin: 0 0 15px;
+
+  color: #333;
+
+  font-size: 22px;
+}
+
+.success-text {
+  color: #666;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   BOOKING SUMMARY
+===================================================== */
+
+.booking-summary {
+  margin: 30px 0 20px;
+
+  padding: 22px;
+
+  background: #faf8f3;
+
+  border: 1px solid #eadfc9;
+
+  border-radius: 15px;
+
+  text-align: left;
+}
+
+.booking-summary h3 {
+  margin: 0 0 15px;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #e3d9c6;
+
+  color: #333;
+
+  font-size: 19px;
+}
+
+
+/* =====================================================
+   SUMMARY ROW
+===================================================== */
+
+.summary-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 9px 0;
+
+  border-bottom: 1px solid #eee;
+
+  font-size: 14px;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span {
+  color: #777;
+}
+
+.summary-row strong {
+  color: #333;
+
+  text-align: right;
+
+  word-break: break-word;
+}
+
+
+/* =====================================================
+   DISCOUNT SUMMARY
+===================================================== */
+
+.discount-summary span,
+.discount-summary strong {
+  color: #4f7f2c;
+}
+
+
+/* =====================================================
+   FINAL SUMMARY
+===================================================== */
+
+.final-summary {
+  margin-top: 10px;
+
+  padding: 15px 0;
+
+  border-top: 2px solid #c89b3c;
+
+  border-bottom: none;
+}
+
+.final-summary span {
+  color: #222;
+
+  font-weight: 700;
+}
+
+.final-summary strong {
+  color: #c89b3c;
+
+  font-size: 22px;
+}
+
+
+/* =====================================================
+   CONFIRMED SERVICES
+===================================================== */
+
+.confirmed-services {
+  margin: 20px 0;
+
+  padding: 20px;
+
+  background: #faf8f3;
+
+  border-radius: 15px;
+
+  text-align: left;
+}
+
+.confirmed-services h3 {
+  margin: 0 0 12px;
+
+  color: #333;
+
+  font-size: 18px;
+}
+
+.confirmed-services ul {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.confirmed-services li {
+  margin: 9px 0;
+
+  color: #555;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   REDIRECT MESSAGE
+===================================================== */
+
+.redirect-message {
+  margin: 25px 0 15px;
+
+  color: #999 !important;
+
+  font-size: 14px;
+
+  font-style: italic;
+}
+
+
+/* =====================================================
+   THANK YOU BUTTON
+===================================================== */
+
+.thank-you-box button {
+  padding: 14px 30px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #c89b3c;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.thank-you-box button:hover {
+  background: #111;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   OLD OFFER APPLIED SUPPORT
+===================================================== */
+
+.offer-applied {
+  margin-top: 20px;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  background: #fff8e6;
+
+  border: 1px solid #d4af37;
+
+  text-align: center;
+}
+
+.offer-applied h3 {
+  margin: 0 0 7px;
+
+  color: #b8860b;
+}
+
+.offer-applied p {
+  margin: 5px 0;
+
+  color: #666;
+}
+
+.offer-applied strong {
+  color: #b8860b;
+
+  font-size: 20px;
+}
+
+.discount-text {
+  color: #d28b00;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .appointment-page {
+    padding: 40px 15px;
+  }
+
+  .appointment-box {
+    padding: 30px 22px;
+
+    border-radius: 18px;
+  }
+
+  .appointment-box h1 {
+    font-size: 29px;
+  }
+
+  .appointment-subtitle {
+    font-size: 14px;
+  }
+
+  .thank-you-page {
+    padding: 40px 15px;
+  }
+
+  .thank-you-box {
+    padding: 30px 20px;
+
+    border-radius: 18px;
+  }
+
+  .thank-you-box h1 {
+    font-size: 34px;
+  }
+
+  .thank-you-box h2 {
+    font-size: 19px;
+  }
+
+  .success-icon {
+    width: 65px;
+    height: 65px;
+
+    font-size: 35px;
+  }
+
+  .summary-row {
+    flex-direction: column;
+
+    gap: 3px;
+  }
+
+  .summary-row strong {
+    text-align: left;
+  }
+
+  .final-summary {
+    flex-direction: row;
+
+    align-items: center;
+  }
+
+  .final-summary strong {
+    text-align: right;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .appointment-box {
+    padding: 25px 17px;
+  }
+
+  .appointment-box h1 {
+    font-size: 26px;
+  }
+
+  .price-summary {
+    padding: 17px;
+  }
+
+  .price-row {
+    font-size: 14px;
+  }
+
+  .final-price-row strong {
+    font-size: 21px;
+  }
+
+  .thank-you-box {
+    padding: 25px 16px;
+  }
+
+  .thank-you-box h1 {
+    font-size: 30px;
+  }
+
+  .thank-you-box h2 {
+    font-size: 17px;
+  }
+
+  .booking-summary {
+    padding: 17px;
+  }
+
+  .final-summary {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .final-summary strong {
+    text-align: left;
+  }
+}

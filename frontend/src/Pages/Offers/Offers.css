@@ -1,0 +1,552 @@
+/* =====================================================
+   OFFERS BANNER
+===================================================== */
+
+.offers-banner {
+  min-height: 55vh;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1560066984-138dadb4c035");
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.offers-overlay {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+}
+
+.offers-overlay h1 {
+  font-size: clamp(42px, 6vw, 70px);
+  margin: 0 0 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.offers-overlay p {
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   OFFERS SECTION
+===================================================== */
+
+.offers-section {
+  padding: 90px 7%;
+  background: #fff;
+  text-align: center;
+}
+
+.offers-section h2 {
+  font-size: 42px;
+  margin: 0 0 12px;
+  color: #222;
+}
+
+.offers-subtitle {
+  color: #777;
+  font-size: 17px;
+  margin-bottom: 55px;
+}
+
+
+/* =====================================================
+   OFFERS GRID
+===================================================== */
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(290px, 1fr)
+  );
+  gap: 30px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+/* =====================================================
+   OFFER CARD
+===================================================== */
+
+.offer-card {
+  position: relative;
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.offer-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #c89b3c;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =====================================================
+   DISCOUNT BADGE
+===================================================== */
+
+.discount {
+  display: inline-block;
+  background: #c89b3c;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   OFFER TITLE
+===================================================== */
+
+.offer-card h3 {
+  font-size: 24px;
+  color: #222;
+  margin: 0 0 10px;
+}
+
+
+/* =====================================================
+   SERVICE NAME
+===================================================== */
+
+.offer-service {
+  color: #c89b3c !important;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 15px !important;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.offer-description {
+  color: #666;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 22px !important;
+}
+
+
+/* =====================================================
+   INCLUDED SERVICES
+===================================================== */
+
+.included-services {
+  background: #faf8f3;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 20px 0;
+}
+
+.included-services h4 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+.included-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.included-services li {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.offer-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+
+.old-price {
+  color: #999;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.new-price {
+  color: #c89b3c;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   SAVINGS
+===================================================== */
+
+.offer-discount-info {
+  display: inline-block;
+  background: #f2f8ed;
+  color: #4c7a28;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   CLAIM BUTTON
+===================================================== */
+
+.offer-card button {
+  width: 100%;
+  background: #111;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.offer-card button:hover {
+  background: #c89b3c;
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   MEMBERSHIP SECTION
+===================================================== */
+
+.membership {
+  background: #f8f5ef;
+  padding: 90px 7%;
+  text-align: center;
+}
+
+.membership h2 {
+  font-size: 42px;
+  color: #222;
+  margin: 0 0 12px;
+}
+
+.membership-subtitle {
+  color: #777;
+  font-size: 17px;
+  margin-bottom: 55px;
+}
+
+
+/* =====================================================
+   MEMBERSHIP GRID
+===================================================== */
+
+.membership-grid {
+  max-width: 1250px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+
+  gap: 30px;
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   MEMBERSHIP CARD
+===================================================== */
+
+.membership-card {
+  position: relative;
+  background: white;
+  padding: 38px 30px;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  border: 1px solid #eee;
+  transition: all 0.35s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =====================================================
+   MEMBERSHIP TITLE
+===================================================== */
+
+.membership-card h3 {
+  font-size: 26px;
+  margin: 0 0 15px;
+  color: #c89b3c;
+}
+
+
+/* =====================================================
+   MEMBERSHIP PRICE
+===================================================== */
+
+.membership-price {
+  font-size: 34px;
+  font-weight: 800;
+  color: #222;
+  margin: 10px 0 15px;
+}
+
+.membership-price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
+
+
+/* =====================================================
+   MEMBERSHIP DESCRIPTION
+===================================================== */
+
+.membership-card > p:not(.membership-price) {
+  color: #666;
+  line-height: 1.6;
+  min-height: 75px;
+}
+
+
+/* =====================================================
+   MEMBERSHIP FEATURES
+===================================================== */
+
+.membership-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.membership-card li {
+  color: #555;
+  margin: 13px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   MEMBERSHIP BUTTON
+===================================================== */
+
+.membership-card button {
+  width: 100%;
+  background: #c89b3c;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.membership-card button:hover {
+  background: #111;
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   SILVER MEMBERSHIP
+===================================================== */
+
+.membership-card.silver {
+  border-top: 5px solid #a7a7a7;
+}
+
+.membership-card.silver h3 {
+  color: #777;
+}
+
+
+/* =====================================================
+   GOLD MEMBERSHIP
+===================================================== */
+
+.membership-card.gold {
+  border: 2px solid #c89b3c;
+  transform: scale(1.03);
+}
+
+.membership-card.gold:hover {
+  transform: scale(1.03) translateY(-10px);
+}
+
+.membership-card.gold h3 {
+  color: #c89b3c;
+}
+
+
+/* =====================================================
+   PLATINUM MEMBERSHIP
+===================================================== */
+
+.membership-card.platinum {
+  border-top: 5px solid #555;
+}
+
+.membership-card.platinum h3 {
+  color: #444;
+}
+
+
+/* =====================================================
+   POPULAR BADGE
+===================================================== */
+
+.popular {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  background: #c89b3c;
+  color: white;
+
+  padding: 7px 12px;
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .offers-section,
+  .membership {
+    padding: 70px 5%;
+  }
+
+  .offers-section h2,
+  .membership h2 {
+    font-size: 36px;
+  }
+
+  .membership-card.gold {
+    transform: none;
+  }
+
+  .membership-card.gold:hover {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .offers-banner {
+    min-height: 45vh;
+  }
+
+  .offers-overlay h1 {
+    font-size: 42px;
+  }
+
+  .offers-overlay p {
+    font-size: 16px;
+  }
+
+  .offers-section,
+  .membership {
+    padding: 60px 20px;
+  }
+
+  .offers-section h2,
+  .membership h2 {
+    font-size: 30px;
+  }
+
+  .offers-subtitle,
+  .membership-subtitle {
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .offer-card {
+    padding: 28px 22px;
+  }
+
+  .membership-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .membership-card {
+    padding: 30px 22px;
+  }
+
+  .membership-price {
+    font-size: 30px;
+  }
+
+  .popular {
+    top: 12px;
+    right: 12px;
+  }
+}
