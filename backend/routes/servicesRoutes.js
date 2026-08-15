@@ -6,7 +6,7 @@ const {
   createService,
   updateService,
   deleteService,
-} = require("../Controllers/servicesController");
+} = require("../controllers/servicesController");
 
 const adminMiddleware = require("../middleware/adminMiddleware");
 
